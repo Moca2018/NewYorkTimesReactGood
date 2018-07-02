@@ -1,8 +1,14 @@
+
+//Dependencies
 var express = require("express");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 var axios = require("axios");
+
+// Require request and cheerio. This makes the scraping possible (Added NEW!)
+var request = require("request");
+var cheerio = require("cheerio");
 
 var PORT = 3003;
 
@@ -12,6 +18,12 @@ var db = require("./models");
 
 // Initialize Express
 var app = express();
+
+
+// Database configuration (Added NEW!)
+var databaseUrl = "scraper";
+var collections = ["scrapedData"];
+
 
 // Use morgan logger for logging requests
 app.use(logger("dev"));
@@ -59,8 +71,8 @@ app.get("/", function(req, res) {
 
 // Scrape data from one site and place it into the mongodb db
 app.get("/scrape", function(req, res) {
-    // Make a request for the news section of `ycombinator`
-    request("https://www.nytimes.com/", function(error, response, html) {
+    // Make a request for the news section of `nyTimes`
+    axios.get("https://www.nytimes.com/", function(error, response, html) {
       // Load the html body from request into cheerio
       var $ = cheerio.load(html);
       // For each element with a "title" class

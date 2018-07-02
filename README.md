@@ -1,4 +1,4 @@
-# NewYorkTimesReactGood
+<!-- # NewYorkTimesReactGood
 
 
 
@@ -40,6 +40,23 @@ example: titles / url / image source (store)
 
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+//REFERENCE THE REACT CLASSWORK AND CREATE THE REACT APP.
+
+DEFINITIONS:
+
+CLIENT = COMPONENTS - HTML - USER EXPERIENCE
+
+CONTROLLERS - UPDATING THE DATABASE
+
+MODELS  = SCHEMA (DECLARE THE VALUES FOR THINGS THAT I WANT TO USE IMPUT: TITLE , URL, DATE)
+
+ROUTES: TO SET THE ROUTES
+SCRIPTS =  LIKE A SEED FILE ()
+
+SERVER JS. -- INCLUDE ALL THE NPM FILES..
+
+
 
 //Create components
 //routes the component  to the different uses
@@ -159,4 +176,4 @@ If you have any questions about this project or the material we have covered, pl
 **Good Luck!**
 
 
-
+ -->
