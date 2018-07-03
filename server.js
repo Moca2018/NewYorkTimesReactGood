@@ -6,9 +6,15 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 var axios = require("axios");
 
-// Require request and cheerio. This makes the scraping possible (Added NEW!)
-var request = require("request");
-var cheerio = require("cheerio");
+// First, tell the console what server2.js is doing
+console.log("\n******************************************\n" +
+            "Grabbing every article headline and link\n" +
+            "from the NYT website:" +
+            "\n******************************************\n");
+
+// // Require request and cheerio. This makes the scraping possible (Added NEW!)
+// var request = require("request");
+// var cheerio = require("cheerio");
 
 var PORT = 3003;
 
